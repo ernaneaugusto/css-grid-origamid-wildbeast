@@ -1,0 +1,38 @@
+@font-face {
+  font-family: VollkornRegular;
+  src: url("./../fonts/Vollkorn-Regular.woff");
+}
+@font-face {
+  font-family: VollkornItalic;
+  src: url("./../fonts/Vollkorn-Italic.ttf");
+}
+@font-face {
+  font-family: VollkornBold;
+  src: url("./../fonts/Vollkorn-Bold.ttf");
+}
+
+div {
+  font-family: VollkornRegular, Georgia, serif;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.1);
+}
+body,
+p,
+h1,
+ul,
+li,
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100px;
+}
