@@ -36,3 +36,9 @@ a {
 img {
   max-width: 100px;
 }
+
+/* GRID GERAL */
+.estrutura {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 1fr 1fr;
+}
