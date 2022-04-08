@@ -14,11 +14,15 @@
 /* VARIABLES */
 :root {
   --cloud: #ecf0f1;
-  --light-purple: #B07dFB;
-  --purple: #84E;
-  --white: #FFF;
+  --light-gray: #fafbfc;
+  --light-purple: #b07dfb;
+  --purple: #84e;
+  --white: #fff;
+
   --border-radius: 5px;
-  --transition: .3s;
+  --padding-default: 30px;
+  --shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
+  --transition: 0.3s;
 }
 * {
   box-sizing: border-box;
@@ -41,6 +45,7 @@ li {
 }
 a {
   text-decoration: none;
+  transition: var(--transition);
 }
 img {
   max-width: 100%;
@@ -63,7 +68,7 @@ img {
 .header {
   grid-area: header;
   background: linear-gradient(135deg, var(--purple), var(--light-purple));
-  padding: 30px;
+  padding: var(--padding-default);
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -79,7 +84,6 @@ img {
   font-size: 1.125rem;
   background: rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
-  transition: var(--transition);
 }
 .header nav a:hover {
   background: rgba(0, 0, 0, 0.5);
@@ -91,18 +95,26 @@ img {
   max-width: 200px;
 }
 
-
-
-
-
-
-
-
-
-
+/* SIDENAV */
 .sidenav {
   grid-area: sidenav;
+  background: var(--light-gray);
+  padding: var(--padding-default);
 }
+.sidenav li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: var(--white);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+.sidenav li a:hover {
+  background: var(--light-purple);
+}
+
 .content {
   grid-area: content;
 }
