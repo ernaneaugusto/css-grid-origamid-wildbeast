@@ -10,6 +10,16 @@
   font-family: VollkornBold;
   src: url("./../fonts/Vollkorn-Bold.ttf");
 }
+
+/* VARIABLES */
+:root {
+  --cloud: #ecf0f1;
+  --light-purple: #B07dFB;
+  --purple: #84E;
+  --white: #FFF;
+  --border-radius: 5px;
+  --transition: .3s;
+}
 * {
   box-sizing: border-box;
 }
@@ -33,7 +43,7 @@ a {
   text-decoration: none;
 }
 img {
-  max-width: 100px;
+  max-width: 100%;
 }
 
 /* GRID GERAL */
@@ -49,9 +59,47 @@ img {
   border: 1px solid #000;
 }
 
+/* HEADER */
 .header {
   grid-area: header;
+  background: linear-gradient(135deg, var(--purple), var(--light-purple));
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header nav a {
+  display: block;
+  padding: 10px;
+  color: var(--cloud);
+  font-size: 1.125rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+.header nav a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.header li + li {
+  margin-left: 30px;
+}
+.logo {
+  max-width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
 .sidenav {
   grid-area: sidenav;
 }
