@@ -126,6 +126,19 @@ img {
 /* CONTENT */
 .content {
   grid-area: content;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--padding-default);
+  gap: var(--gap-default);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.content .image-1 {
+  grid-row: span 2;
+  align-self: flex-end;
+}
+.content .image-2 {
+  align-self: flex-end;
 }
 
 /* ADS */
@@ -147,4 +160,12 @@ img {
   color: var(--cloud);
   text-align: center;
   padding: var(--padding-default);
+}
+
+/* HELPERS */
+.col-wide {
+  grid-column: 1 / -1;
+}
+.col-wide {
+  grid-column: 1 / -1;
 }
